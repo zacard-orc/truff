@@ -1,0 +1,329 @@
+{
+  "contractName": "Test",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "sayHi",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"sayHi\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/king/Documents/mylab/defi/t41/contracts/Test.sol\":\"Test\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/king/Documents/mylab/defi/t41/contracts/Test.sol\":{\"keccak256\":\"0xbf07323efdbd6afc198827d4dca572d563cbd582b906ea6b858151dacfdda757\",\"urls\":[\"bzz-raw://937a2965ff556cc73e57b9723fee2f139c0b2a97295911bc33a84448add869da\",\"dweb:/ipfs/QmeU6biQkvpFJafCRzavtcU6nAMww3hGoAoKuWFSVzdDdt\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061011d806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80630c49c36c14602d575b600080fd5b603360ab565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101560715780820151818401526020810190506058565b50505050905090810190601f168015609d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60606040518060400160405280600981526020017f48692c206c696e6c79000000000000000000000000000000000000000000000081525090509056fea265627a7a723158208708bf3b494f7bf300795822367cd6bad2800134f1b67951bbb995e5ddf0084464736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80630c49c36c14602d575b600080fd5b603360ab565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101560715780820151818401526020810190506058565b50505050905090810190601f168015609d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60606040518060400160405280600981526020017f48692c206c696e6c79000000000000000000000000000000000000000000000081525090509056fea265627a7a723158208708bf3b494f7bf300795822367cd6bad2800134f1b67951bbb995e5ddf0084464736f6c63430005100032",
+  "sourceMap": "34:109:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:109:0;;;;;;;",
+  "deployedSourceMap": "34:109:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:109:0;;;;;;;;;;;;;;;;;;;54:87;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;54:87:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;92:13;116:18;;;;;;;;;;;;;;;;;;;54:87;:::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\n\ncontract Test {\n    function sayHi() public pure returns (string memory){\n        return \"Hi, linly\";\n    }\n}\n\n",
+  "sourcePath": "/Users/king/Documents/mylab/defi/t41/contracts/Test.sol",
+  "ast": {
+    "absolutePath": "/Users/king/Documents/mylab/defi/t41/contracts/Test.sol",
+    "exportedSymbols": {
+      "Test": [
+        10
+      ]
+    },
+    "id": 11,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10,
+        "linearizedBaseContracts": [
+          10
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 8,
+              "nodeType": "Block",
+              "src": "106:35:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48692c206c696e6c79",
+                    "id": 6,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "123:11:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_d69c028061d2a4c289833e00a62f58c2f42a1f913dc5292234761aadc9e232d5",
+                      "typeString": "literal_string \"Hi, linly\""
+                    },
+                    "value": "Hi, linly"
+                  },
+                  "functionReturnParameters": 5,
+                  "id": 7,
+                  "nodeType": "Return",
+                  "src": "116:18:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sayHi",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "68:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9,
+                  "src": "92:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "92:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "91:15:0"
+            },
+            "scope": 10,
+            "src": "54:87:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 11,
+        "src": "34:109:0"
+      }
+    ],
+    "src": "0:145:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/king/Documents/mylab/defi/t41/contracts/Test.sol",
+      "exportedSymbols": {
+        "Test": [
+          10
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10
+          ],
+          "name": "Test",
+          "scope": 11
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "sayHi",
+              "scope": 10,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2,
+                "name": "ParameterList",
+                "src": "68:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 9,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3,
+                        "name": "ElementaryTypeName",
+                        "src": "92:6:0"
+                      }
+                    ],
+                    "id": 4,
+                    "name": "VariableDeclaration",
+                    "src": "92:13:0"
+                  }
+                ],
+                "id": 5,
+                "name": "ParameterList",
+                "src": "91:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 5
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "48692c206c696e6c79",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "string",
+                          "type": "literal_string \"Hi, linly\"",
+                          "value": "Hi, linly"
+                        },
+                        "id": 6,
+                        "name": "Literal",
+                        "src": "123:11:0"
+                      }
+                    ],
+                    "id": 7,
+                    "name": "Return",
+                    "src": "116:18:0"
+                  }
+                ],
+                "id": 8,
+                "name": "Block",
+                "src": "106:35:0"
+              }
+            ],
+            "id": 9,
+            "name": "FunctionDefinition",
+            "src": "54:87:0"
+          }
+        ],
+        "id": 10,
+        "name": "ContractDefinition",
+        "src": "34:109:0"
+      }
+    ],
+    "id": 11,
+    "name": "SourceUnit",
+    "src": "0:145:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xfa623B8383a9c55AA1e0ed4ed70DE774687C4c66",
+      "transactionHash": "0xea918a50fb91c3726e531f1bb34da3c668e0a083b4ad52d70a129b3156b21cb5"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-28T07:49:16.223Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
