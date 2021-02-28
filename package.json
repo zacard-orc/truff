@@ -12,6 +12,7 @@
   "author": "13816025562@139.com",
   "license": "ISC",
   "dependencies": {
-    "truffle-contract": "^4.0.31"
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.3.4"
   }
 }
