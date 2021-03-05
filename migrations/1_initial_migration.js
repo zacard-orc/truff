@@ -1,7 +1,9 @@
 const Migrations = artifacts.require("Migrations");
-const Test = artifacts.require('Test');
+const Coin = artifacts.require('Coin');
+
+console.log(Coin)
 
 module.exports = function (deployer) {
   deployer.deploy(Migrations);
-  deployer.deploy(Test);
+  deployer.deploy(Coin);
 };
