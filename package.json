@@ -1,13 +1,15 @@
 {
   "name": "t41",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "truffle compile",
+    "pub": "truffle migrate"
   },
   "author": "13816025562@139.com",
   "license": "ISC",
