@@ -47,9 +47,20 @@
 
       if (window.ethereum) {
         web3Provider = window.ethereum;
+        console.log(window.ethereum)
         try {
           // 请求用户授权
-          window.ethereum.enable();
+          window.ethereum.enable(()=>{
+            // web3js.eth.getAccounts((error, accounts) => {
+            //   console.log(error)
+            //   console.log(accounts)
+            // })
+          });
+          /* 登录，登出时候 */
+          window.ethereum.on('accountsChanged',(e)=>{
+            console.log('accounts changed')
+            console.log(e)
+          })
         } catch (error) {
           // 用户不授权时
           console.error("User denied account access")
@@ -57,11 +68,15 @@
       }
       web3js = new Web3(web3Provider);//web3js就是你需要的web3实例
 
-      web3js.eth.getAccounts(function (error, result) {
-        console.log(result)
-        // if (!error)
-        //   console.log(result)//授权成功后result能正常获取到账号了
-      });
+      // 只能用setInterval来扫描
+      // setInterval(()=>{
+      //   web3js.eth.getAccounts(function (error, result) {
+      //     console.log(result)
+      //     // if (!error)
+      //     //   console.log(result)//授权成功后result能正常获取到账号了
+      //   });
+      // },1000)
+
 
 
     } else {
@@ -71,7 +86,7 @@
     }
 
     // 现在你可以启动你的应用并自由访问 Web3.js:
-    startApp()
+    // startApp()
 
   })
 </script>
