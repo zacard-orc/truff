@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Include web3.js here -->
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <script src="./abi.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+  function startApp() {
+    const testContractAddress = '0x97dDaD0D82257b63531ec341f6Bc0524A07926F5';
+    const inst = new web3js.eth.Contract(abi, testContractAddress);
+
+    // console.log(abi)
+    // console.log(inst.methods)
+    // inst.methods.set(2999).cal
+
+    inst.methods.get().call().then(console.log)
+
+    inst
+      .methods
+      .set(5999)
+      .send({from:'0x7bC38f9e6A9dD19AA147D400a01308868CEb8890'}, (err, txhash) => {
+        console.log(err)
+        console.log(txhash)
+      })
+  }
+
+  window.addEventListener('load', function () {
+
+    // 检查web3是否已经注入到(Mist/MetaMask)
+    if (typeof web3 !== 'undefined') {
+      // 使用 Mist/MetaMask 的提供者
+      // web3js = new Web3(web3.currentProvider);
+      // console.log(web3js.eth)
+      // console.log(abi)
+      // console.log(Web3js)
+      // console.log(window.ethereum)
+
+
+      if (window.ethereum) {
+        web3Provider = window.ethereum;
+        try {
+          // 请求用户授权
+          window.ethereum.enable();
+        } catch (error) {
+          // 用户不授权时
+          console.error("User denied account access")
+        }
+      }
+      web3js = new Web3(web3Provider);//web3js就是你需要的web3实例
+
+      web3js.eth.getAccounts(function (error, result) {
+        console.log(result)
+        // if (!error)
+        //   console.log(result)//授权成功后result能正常获取到账号了
+      });
+
+
+    } else {
+      // 处理用户没安装的情况， 比如显示一个消息
+      // 告诉他们要安装 MetaMask 来使用我们的应用
+      console.log('no meta mask')
+    }
+
+    // 现在你可以启动你的应用并自由访问 Web3.js:
+    startApp()
+
+  })
+</script>
+</html>

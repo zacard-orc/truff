@@ -1,6 +1,6 @@
 pragma solidity 0.5.16;
 
-//contract TestLA {
+//contract Test {
 //
 //    function () external payable {}
 //
@@ -31,6 +31,22 @@ pragma solidity 0.5.16;
 //        add.transfer(u);
 //    }
 //}
+
+
+contract Test {
+
+    function () external payable {}
+
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
+}
 
 
 contract Coin {
