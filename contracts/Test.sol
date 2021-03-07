@@ -1,4 +1,4 @@
-pragma solidity 0.5.16;
+pragma solidity ^0.5.16;
 
 //contract Test {
 //
@@ -34,17 +34,42 @@ pragma solidity 0.5.16;
 
 
 contract Test {
-
-    function () external payable {}
-
+    uint256 ticket = 0.05 ether;
     uint storedData;
+    uint amount;
+    address payable public owner = address(0x0);
+
+    constructor() public payable {
+        owner = msg.sender;
+    }
+
+    // 可被支付的合约，当被支付时调用
+    function() external payable {
+        amount += msg.value;
+//        require(msg.value >= ticket);
+//        if (msg.value > ticket) {
+//            uint refundFee = msg.value - ticket;
+//            msg.sender.transfer(refundFee);
+//        }
+    }
+
+    function withdraw() public {
+//        msg.sender.transfer(amount);
+        owner.transfer(amount);
+        amount = 0;
+    }
 
     function set(uint x) public {
         storedData = x;
+        amount += x;
     }
 
     function get() public view returns (uint) {
         return storedData;
+    }
+
+    function getAmt() public view returns (uint,address) {
+        return (amount, owner);
     }
 }
 
@@ -75,13 +100,13 @@ contract Coin {
         return minter;
     }
 
-//    function getBalance() public view returns (mapping(address => uint) memory){
-//        return balances;
-//    }
+    //    function getBalance() public view returns (mapping(address => uint) memory){
+    //        return balances;
+    //    }
 
     function mint(address receiver, uint amount) public {
         if (msg.sender != minter) return;
-        storedData+=20;
+        storedData += 20;
         balances[receiver] += amount;
     }
 

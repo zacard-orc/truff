@@ -15,7 +15,7 @@
 <script type="text/javascript">
 
   function startApp() {
-    const testContractAddress = '0x97dDaD0D82257b63531ec341f6Bc0524A07926F5';
+    const testContractAddress = '0x5974843C17a81456B1BC56216E7d1B80802F2866';
     const inst = new web3js.eth.Contract(abi, testContractAddress);
 
     // console.log(abi)
@@ -23,14 +23,30 @@
     // inst.methods.set(2999).cal
 
     inst.methods.get().call().then(console.log)
+    inst.methods.getAmt().call().then(console.log)
 
     // inst
     //   .methods
-    //   .set(5999)
-    //   .send({from:'0x7bC38f9e6A9dD19AA147D400a01308868CEb8890'}, (err, txhash) => {
+    //   .set(28)
+    //   .send({
+    //     from:'0x7bC38f9e6A9dD19AA147D400a01308868CEb8890',
+    //   }, (err, txhash) => {
     //     console.log(err)
     //     console.log(txhash)
     //   })
+
+    /*
+     调用合约拿回钱
+    */
+    inst
+      .methods
+      .withdraw()
+      .send({
+        from:'0x7bC38f9e6A9dD19AA147D400a01308868CEb8890',
+      }, (err, txhash) => {
+        console.log(err)
+        console.log(txhash)
+      })
   }
 
   window.addEventListener('load', function () {
@@ -86,7 +102,7 @@
     }
 
     // 现在你可以启动你的应用并自由访问 Web3.js:
-    // startApp()
+    startApp()
 
   })
 </script>
